@@ -1,6 +1,11 @@
 # freq-updater
 Updater for freqtrade strategies and configuration
 
+Install the requirements
+```
+pip -r requirements.txt
+```
+
 Create a copy of, or rename config_example.json to config.json.
 
 Modify the config.json to include the repositories, bots you want to auto update.
