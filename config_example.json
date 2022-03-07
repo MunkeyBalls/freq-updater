@@ -1,0 +1,50 @@
+{
+    "telegram": {        
+        "token": "",
+        "chat_id": "" 
+    },
+    // If you use the same user/pass for all bots you can define them here, otherwise remove this section
+    // "api":{
+    //     "user": "user123",
+    //     "pass": "pass321",
+    //     "verify_ssl": false
+    // },
+    "repositories": 
+    [
+        {
+            "directory": "/opt/appdata/freqtrade/strats/NostalgiaForInfinity",
+            "url": "https://github.com/MunkeyBalls/NostalgiaForInfinity.git",
+            "branch": "blacklist",
+            "files": [
+                {"file_src": "configs"},
+                {"file_src": "NostalgiaForInfinityX.py", "file_dst": "strategies/NostalgiaForInfinityX.py"}
+            ],
+            "bots": [
+                {
+                    "name": "freqtrade_dry",
+                    "directory": "/opt/appdata/freqtrade/user_data_dry",
+                    "api":{
+                        "address": "https://freq-dry.lan"
+                    }
+                },
+                {
+                    "name": "freqtrade_usdt",
+                    "directory": "/opt/appdata/freqtrade/user_data_usdt",
+                    "api":{
+                        "address": "https://freq-busd.lan",
+                        "user": "user321",
+                        "pass": "pass123",
+                        "verify_ssl": true
+                    }
+                },
+                {
+                    "name": "freqtrade_kucoin",
+                    "directory": "/opt/appdata/freqtrade/user_data_kucoin",
+                    "api":{
+                        "address": "https://freq-kucoin.lan"
+                    }
+                }
+            ]
+        }
+    ]
+}
